@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+/*ASSET CLASS PART*/
+*{
+    margin:0; /*element ke chaaro trf koi bhi space nhi hoga*/
+    padding:0; /*element ke andar border aur content ke beech me 0 space ho jayega*/
+    box-sizing:border-box;
+    
+} 
+ /*here we declared a variable, through which puri website ke colors ek baar me hi change kiye ja ske hain*/
+:root {
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section:20px;
+}
+
+/*puri body ka font aur color ek hi baar me set kr diya*/
+body {
+    font-family:'poppins',sans-serif;
+    color: var(--primary-text-color); /*root variable ko use me liya hamne yhan pe*/
+}
+
+/*puri websites me sbi heading ka font size set krdiya*/
+h1{
+    font-size:2rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+   font-size:1.5rem
+}
+
+/*paragraph ka bi change kr dete hai*/
+p{
+    font-family: 'Roboto',sans-serif;
+    font-size:1.25rem;
+    color:var(--secondary-text-color);
+    line-height: 1.8rem; /* amount of space above and below line*/
+}
+
+/*handle all the  anchor tag*/
+
+a{
+    text-decoration:none; /* you ensure that links do not have underlines, making them appear as plain text*/
+    display:inline-block; /* allows you to style links as if they were inline elements but with more control over their dimensions and spacing*/
+} 
+
+/*saare ul me se dots ko htao*/
+ul{
+     list-style:none;
+}
+
+
+/*ABHI TAK JITNA KAAM UPPAR KIYE HAIN VO GENRALLY HAR WEBSITE ME KRTEY HAI*/
+
+/*UTILITY CLASS PART*/
+
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/*left and right side me ek grid banani hogi taki sara content inhi do ke beech me rhey*/
+/*aisa krne ke liye container banao html me aur uske andr content dalo */
+/*fi css me aake container ka width,mrgin aur padding set kr do*/
+.container{
+    max-width:1180px; 
+    margin-inline: auto; /*it will center the container horizontally on the web page automatically*/
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex{
+    display:flex;
+    align-items:center;
+}
+
+.hover-link{
+     color:var(--primary-text-color);
+     transition:0.2s ease-out; /*color transition hone me 0.2 sec ka gap rhega*/
+}
+
+.hover-link:hover{
+    color:var(--accent-color);
+}
+
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius:6px;
+    font-weight:700;
+    color:white !important;
+    padding: 12px 24px ; 
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition:0.2s ease-out;
+
+}
+
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+    color: yellow !important; 
+}
+
+.secondary-button{
+     /* background-color:var(--accent-color);  */
+    border:0.5px solid black;
+    border-radius:6px;
+    font-weight: 700;
+    color:var(--primary-text-color) !important;
+    padding: 12px 24px;
+    box-shadow: 0  0 2px var(--secondary-text-color);
+    transition:0.2s ease-out;
+}
+
+.secondary-button:hover{
+    
+    color: red !important; 
+}
+
+/*TOP-BANNER*/
+
+.top-Banner{
+    background-color: #4fb3d4;
+    background-image:url("images/asset\ 32.png");
+    background-size:400px;
+    
+}
+
+.banner-text{
+    color:white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+/*NAVIGATION-BAR*/
+
+.main-nav{ /*ye to pehle se hi flex ho rkkha hai*/
+    margin-top:20px;
+    justify-content:space-between;
+}
+
+.company-logo img{
+     width:200px
+}
+
+.nav-links{
+    flex-basis:730px;
+}
+
+.nav-links ul{
+    justify-content:end;
+    gap:40px;
+}
+
+/*HEADER SECTION*/
+
+header{
+    padding: 50px var(--padding-inline-section) 0;
+
+}
+
+.header-section{
+    justify-content:center;
+    gap:60px;
+}
+
+.header-left{
+    max-width: 40vw;
+}
+
+.header-left h1{
+    margin-top: 20px;
+}
+
+.header-right img{
+    width: 600px;
+}
+
+.get-started-btn{
+    margin-top: 20px;
+}
+
+.companies-header{
+    text-align: center;
+    margin-block: 30px;
+    color:var(--primary-text-color);
+}
+
+.logos{
+    justify-content: space-between;
+}
+
+.logo{
+    height:46px;
+}
+
+/*features section*/
+.features-section{
+    padding:80px var(--padding-inline-section) 0;
+    background-image: url(images/feature.svg); 
+    background-size: 700px; 
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.feature-header{
+    margin-top:40px;
+    text-align: center;
+}
+
+.feature-heading-text{
+     margin-bottom: 20px;
+}
+
+.features-area{
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-top:20px;
+    gap:20px;
+
+}
+
+.features-card{
+     flex-direction:column;
+     gap:20px;
+     max-width:30%;
+}
+
+/*big feature section*/
+
+.big-feature-section{
+    padding: 30px var(--padding-inline-section) 0; 
+}
+
+.big-feature-container{
+    gap:30px;
+}
+
+.feature-img img{
+    width:100%;
+}
+
+.feature-discription{
+    flex-direction: column;
+    align-items:flex-start; /*aligns the item at the top of container*/
+}
+
+/*examples section*/
+
+.examples-header{
+    text-align: center;
+    flex-direction: column;
+    gap:20px;
+}
+
+.examples-area{
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.examples-card{
+    width : 23% ;
+    position : relative;
+    margin-top: 50px;
+    min-height: 300px;
+    background:black;
+    background-image:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)) ,url(images/asset\ 36.jpeg);
+}
+
+.examples-card:nth-child(3){
+    background-image:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)) ,url(images/asset\ 37.jpeg);
+    background-size:cover;
+}
+.examples-card:nth-child(4){
+    background-image:linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)) ,url(images/asset\ 38.jpeg);
+    background-size: cover;
+}
+
+.examples-card:hover{
+    box-shadow: 0 0 10px #888;
+}
+
+
+.card-text{
+    position : absolute ;
+    bottom : 20px ;
+    left : 20px;
+    right : 20px;
+    color : white;
+}
+
+/*cta-section container*/
+
+.cta-section-container{
+  flex-direction:column;
+  gap:30px;
+  color:white;
+  
+}
+
+.cta-section{
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #183b54; /*full section will become colored*/
+}
+
+.cta-section-container p{
+    color:white;
+    margin-top:20px;
+}
+
+/*footer section*/
+
+footer{
+    padding-block: 80px;
+    background-color: #c7e4ee;
+}
+.link-column{
+    flex-direction:column;
+    align-items:flex-start;
+   font-weight:700;
+    gap:20px;
+}
+
+.link-column:hover h4{
+    color:darkblue;
+    font-weight: 1000;
+}
+
+.hover-link:hover{
+    color:#ef0a0a;
+}
+
+.footer-container{
+    justify-content:space-between;
+}
+
+/*sub-footer*/
+
+.sub-footer{
+    background-color:#b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.sub-footer-container{
+    justify-content : center;
+    gap : 30px;
+}
+
